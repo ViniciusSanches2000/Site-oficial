@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Titan Engenharia Química & Soluções Ambientais</title>
+  <meta name="description" content="Consultoria especializada em licenciamento ambiental, gestão de resíduos e eficiência energética para sua empresa">
+  <meta name="keywords" content="consultoria ambiental, licenciamento, gestão de resíduos, eficiência energética, sustentabilidade, engenharia química">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Hack para GitHub Pages com SPAs -->
+  <script type="text/javascript">
+    // Esta função busca o parâmetro de redirecionamento e faz a navegação apropriada
+    function redirectToApp() {
+      // Se estamos no GitHub Pages mas não na raiz, redirecionar para a raiz
+      if (window.location.hostname.indexOf('.github.io') > -1 && window.location.pathname !== '/') {
+        window.location.href = '/';
+        return;
+      }
+      
+      // Carrega o aplicativo React
+      const script = document.createElement('script');
+      script.src = './client/src/main.tsx';
+      script.type = 'module';
+      document.body.appendChild(script);
+      
+      // Adiciona o CSS principal
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = './client/src/index.css';
+      document.head.appendChild(link);
+    }
+    
+    // Executa o redirecionamento quando o documento estiver carregado
+    document.addEventListener('DOMContentLoaded', redirectToApp);
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 50px;
+      background: #f8f9fa;
+    }
+    h1 {
+      color: #2e7d32;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+    }
+    p {
+      margin: 20px 0;
+      font-family: 'Open Sans', sans-serif;
+    }
+    .loading {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border: 3px solid rgba(46, 125, 50, 0.3);
+      border-radius: 50%;
+      border-top-color: #2e7d32;
+      animation: spin 1s ease-in-out infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    #root {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="loading-container">
+    <h1>Titan Engenharia Química & Soluções Ambientais</h1>
+    <p>Carregando o site...</p>
+    <div class="loading"></div>
+  </div>
+  <div id="root"></div>
+  
+  <noscript>
+    <h1>JavaScript Desativado</h1>
+    <p>Este site requer JavaScript para funcionar corretamente. Por favor, habilite o JavaScript em seu navegador e recarregue a página.</p>
+  </noscript>
+</body>
+</html>
